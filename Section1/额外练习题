@@ -1,0 +1,28 @@
+以下是一些可以利用本模块教材完成的额外编程问题。  许多问题在难度和内容上与家庭作业相似，但它们不是家庭作业，所以你们可以在讨论区自由讨论解决方案等。  感谢 Charilaos Skiadas 提供这些内容。
+
+编写一个函数
+alternate : int list -> int,接收一个数字列表并将其与符号交替的数字相加。例如 alternate [1,2,3,4] = 1 - 2 + 3 - 4 = -2
+
+编写一个函数
+min_max : int list -> int * int, 接收一个非空数字列表，并返回列表中数字的最小值和最大值对 (min, max)
+
+编写一个函数
+cumsum : int list -> int list，接收一个数字列表，并返回这些数字的偏和列表。例如 cumsum [1,4,20] = [1,5,25]
+
+编写一个函数
+greeting : string option -> string，在给定字符串选项 SOME name的情况下，返回用name 替换点的字符串
+"Hello there, ...!". 注意，名称是作为选项给出的，因此如果名称是 NONE，则用 "you", 替换点。
+
+编写一个函数
+repeat : int list * int list -> int list，在给定一个整数列表和另一个非负整数列表的情况下，根据第二个列表中的数字重复第一个列表中的整数。例如：
+repeat ([1,2,3], [4,0,3]) = [1,1,1,1,3,3,3]
+
+编写一个函数
+addOpt  : int option * int option -> int option，在给定两个 "可选 "整数的情况下，如果这两个整数都存在，则将这两个整数相加（返回这两个整数之和的SOME，如果这两个参数中至少有一个是NONE ，则返回NONE
+
+编写一个函数
+addAllOpt  : int option list -> int option ，在给定一个 "可选 "整数列表的情况下，将其中的整数相加（即相加所有 SOME i）。例如：addAllOpt ([SOME 1, NONE, SOME 3]) = SOME 4 如果列表中不包含任何 SOME i，即它们都是NONE或列表为空，函数应返回NONE
+
+编写一个函数
+any : bool list -> bool ，在给定的布尔列表中，如果至少有一个是true，则返回true ，否则返回false（如果列表为空，则应返回false，因为没有true
+
