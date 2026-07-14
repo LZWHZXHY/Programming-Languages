@@ -26,3 +26,15 @@ addAllOpt  : int option list -> int option ，在给定一个 "可选 "整数列
 编写一个函数
 any : bool list -> bool ，在给定的布尔列表中，如果至少有一个是true，则返回true ，否则返回false（如果列表为空，则应返回false，因为没有true
 
+编写一个函数all : bool list -> bool，在给定的布尔列表中，如果所有布尔都是true，则返回true，否则返回false。（如果列表为空，则应返回true，因为没有false
+
+编写一个函数zip : int list * int list -> int * int，在给定两个整数列表的情况下，创建连续的整数对，并在其中一个列表为空时停止。例如：zip ([1,2,3], [4, 6]) = [(1,4), (2,6)]
+
+挑战：编写
+zipRecycle版本的zip，其中一个列表为空时，它会从其起点开始循环，直到另一个列表完成。例如：zipRecycle ([1,2,3], [1, 2, 3, 4, 5, 6, 7]) = [(1,1), (2,2), (3, 3), (1,4), (2,5), (3,6), (1,7)]
+
+较小挑战：编写一个返回类型为(int * int) list option 的zip版本zipOpt 。如果原始列表的长度相同，该版本应返回SOME ，如果不相同，则返回NONE
+
+编写一个函数
+lookup : (string * int) list * string -> int option ，它接收一个配对列表(s, i)和一个要查找的字符串s2.然后，该函数在列表中查找第一个组件中的字符串s2。如果找到与i对应的匹配项，则返回SOME i
+如果找不到，则返回NONE
