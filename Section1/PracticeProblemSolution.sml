@@ -124,19 +124,14 @@ fun lookup(xs: (string * int) list, str: string) =
         else
             lookup(tl xs, str)
 
-fun splitup(xs: int list) =
-    let
-        val pos_list = []
-        val neg_list = []
-    in
-        if null xs
-        then pos_list @ neg_list
-        else
-            if hd xs < 0
-            then hd xs :: neg_list
-            else if hd xs > 0
-            then 
-                hd xs:: pos_list
-            else
-                splitup(tl xs)
-    end
+fun splitup(xs) =
+    if null xs then ([], [])
+    else
+        let
+            val (pos, neg) = splitup(tl xs)
+            val head = hd xs
+        in
+            if head < 0 then (pos, head::neg)
+            else (head::pos, neg)
+        end
+
